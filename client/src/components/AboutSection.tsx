@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, MapPin } from "lucide-react";
-import iitKgpImage from "@assets/generated_images/IIT_Kharagpur_campus_photo_36854d9d.png";
+import iitKgpImage from "@assets/image_1758046521081.png";
 
 export default function AboutSection() {
   return (
@@ -40,7 +40,7 @@ export default function AboutSection() {
                     <div>
                       <p className="font-medium">B.Tech, Chemical Engineering</p>
                       <p className="text-muted-foreground">Indian Institute of Technology Kharagpur</p>
-                      <p className="text-sm text-muted-foreground">2023 - 2027 • CGPA: 8.92</p>
+                      <p className="text-sm text-muted-foreground">2023 - 2027 </p>
                     </div>
                   </div>
                 </div>
@@ -55,8 +55,7 @@ export default function AboutSection() {
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Academic Excellence</h4>
                   <p className="text-muted-foreground">
-                    Ranked among top 10% at IIT KGP with strong performance in both theoretical 
-                    and practical aspects of engineering and technology.
+                    Ranked among top 1% in the country in JEE Advanced 2023, securing a seat in IIT Kharagpur.
                   </p>
                 </div>
               </div>

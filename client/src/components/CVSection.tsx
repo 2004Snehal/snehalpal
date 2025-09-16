@@ -88,7 +88,7 @@ export default function CVSection() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Complete academic background and CGPA</span>
+                  <span className="text-muted-foreground">Complete academic background </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>

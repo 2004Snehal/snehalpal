@@ -40,7 +40,7 @@ export default function HodosSection() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <Target className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Built MVP for travel audit automation with integrated booking APIs</span>
+                  <span>Built MVP for travel audit automation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
