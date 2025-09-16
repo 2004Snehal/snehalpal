@@ -4,7 +4,9 @@ import { Download, ExternalLink, FileText } from "lucide-react";
 
 export default function CVSection() {
   const openGoogleDriveCV = () => {
-    window.open('https://drive.google.com/drive/folders/1NgWxgX4_aqREwa1f92m1Jmgd-SprJUI3?usp=sharing', '_blank');
+    //todo: replace with actual Google Drive link
+    console.log('Opening CV from Google Drive');
+    // window.open('GOOGLE_DRIVE_LINK_HERE', '_blank');
   };
 
   const downloadCV = () => {
@@ -55,7 +57,7 @@ export default function CVSection() {
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-muted-foreground">Languages</span>
-                  <span className="font-medium">Python, SQL, ML</span>
+                  <span className="font-medium">English, Hindi, Bengali</span>
                 </div>
               </div>
               
