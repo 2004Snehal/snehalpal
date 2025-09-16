@@ -20,25 +20,11 @@ export default function AchievementsSection() {
       icon: "trophy"
     },
     {
-      id: "2", 
-      title: "Academic Excellence",
-      description: "Consistently ranked among top 10% of students at IIT Kharagpur with strong performance across all subjects",
-      metric: "Top 10%",
-      icon: "star"
-    },
-    {
       id: "3",
       title: "Leadership Role",
       description: "Served as Sub-head of Finance and Economics Club at IIT Kharagpur, leading equity research and organizing industry workshops",
       metric: "Sub-head",
       icon: "trending"
-    },
-    {
-      id: "4",
-      title: "Research Impact", 
-      description: "Published research work in AI applications with significant contributions to machine learning and data science projects",
-      metric: "Research",
-      icon: "award"
     }
   ];
 
@@ -99,11 +85,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Additional stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">8.92</div>
-            <div className="text-muted-foreground">CGPA at IIT KGP</div>
-          </div>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
           <div>
             <div className="text-3xl font-bold text-primary mb-2">3+</div>
             <div className="text-muted-foreground">Research Projects</div>
@@ -113,7 +95,7 @@ export default function AchievementsSection() {
             <div className="text-muted-foreground">Startup Founded</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary mb-2">4+</div>
+            <div className="text-3xl font-bold text-primary mb-2">2</div>
             <div className="text-muted-foreground">Internships</div>
           </div>
         </div>

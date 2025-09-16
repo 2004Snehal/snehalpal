@@ -29,7 +29,7 @@ export default function TimelineSection() {
     {
       id: "2", 
       title: "Research Intern",
-      organization: "AI Department, IIT Kharagpur",
+      organization: "Center of Excellence in AI, AI Department, IIT Kharagpur",
       period: "Jan 2025 - Mar 2025",
       location: "Kharagpur, India",
       description: "Applied advanced AI algorithms including Transformers and GNNs for land use classification using satellite imagery, achieving 68% accuracy in PolSAR classification.",

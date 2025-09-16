@@ -134,59 +134,15 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <Card className="p-8">
+          <Card className="p-8 opacity-50">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  placeholder="Your full name"
-                  required
-                  data-testid="input-name"
-                />
+            <div className="space-y-6">
+              <div className="text-center py-8">
+                <p className="text-muted-foreground">
+                  Contact form is currently disabled. Please reach out via email or social media links above.
+                </p>
               </div>
-              
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your.email@example.com"
-                  required
-                  data-testid="input-email"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell me about your project, opportunity, or just say hello..."
-                  rows={5}
-                  required
-                  data-testid="input-message"
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full hover-elevate"
-                disabled={isSubmitting}
-                data-testid="button-send-message"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
-            </form>
+            </div>
           </Card>
         </div>
       </div>

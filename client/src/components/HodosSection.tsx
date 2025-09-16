@@ -47,10 +47,6 @@ export default function HodosSection() {
                   <span>Collaborated with industry leaders including Otis, Dassault, and Rakuten</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Developed strategic pricing models and security workflows</span>
-                </li>
-                <li className="flex items-start gap-3">
                   <TrendingUp className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Led investor discussions and evaluated strategic funding opportunities</span>
                 </li>

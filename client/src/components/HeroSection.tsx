@@ -34,8 +34,7 @@ export default function HeroSection() {
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-              Former Co-Founder & COO at Hodos, AI researcher at IIT Kharagpur, 
-              and passionate about building products that solve real problems.
+              Passionate entrepreneur, AI researcher, product enthusiast.
             </p>
             
             <div className="flex flex-wrap gap-4">
