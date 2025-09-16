@@ -48,7 +48,7 @@ export default function TimelineSection() {
       id: "4",
       title: "Co-Founder & COO",
       organization: "Hodos",
-      period: "2024 - ", 
+      period: "Jan 2025 - June 2025", 
       location: "India",
       description: "Built corporate travel expense management platform with booking APIs, account aggregation, and ERP solutions. Led GTM strategy and business development initiatives with VC discussions.",
       type: "startup"
