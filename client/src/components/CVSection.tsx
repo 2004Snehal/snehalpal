@@ -6,7 +6,7 @@ export default function CVSection() {
   const openGoogleDriveCV = () => {
     //todo: replace with actual Google Drive link
     console.log('Opening CV from Google Drive');
-    // window.open('GOOGLE_DRIVE_LINK_HERE', '_blank');
+     window.open('https://drive.google.com/drive/folders/1NgWxgX4_aqREwa1f92m1Jmgd-SprJUI3?usp=drive_link', '_blank');
   };
 
   const downloadCV = () => {
