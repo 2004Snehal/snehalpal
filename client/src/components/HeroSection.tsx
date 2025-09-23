@@ -39,7 +39,7 @@ export default function HeroSection() {
             
             <div className="flex flex-wrap gap-4">
               <Button
-                onClick={() => scrollToSection('projects')}
+                onClick={() => scrollToSection('timeline')}
                 className="hover-elevate"
                 data-testid="button-view-work"
               >
