@@ -1,18 +1,4 @@
-# Snehal Pal - Portfolio Website
-
-A modern, responsive portfolio website showcasing entrepreneurial journey, AI research, and professional achievements. Built with React, TypeScript, and Tailwind CSS.
-
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![React](https://img.shields.io/badge/React-18.x-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-3.x-blue)
-
-## 🌟 Features
-
-- **Modern Design**: Clean, professional dark theme with smooth animations
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Navigation**: Smooth scroll between sections with active highlighting
-- **Project Showcases**: Embedded YouTube videos and detailed project descriptions
-- **Timeline**: Professional journey including startup experience and research
-- **Theme Toggle**: Light/dark mode support
-- **Contact Integration**: Direct links to professional profiles and CV
+ professional profiles and CV
 - **SEO Optimized**: Meta tags and structured data for search engines
 
 ## 📁 Project Structure
