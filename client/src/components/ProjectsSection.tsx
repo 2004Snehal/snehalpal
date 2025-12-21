@@ -44,6 +44,15 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/2004Snehal/AutomatedBookPublicationWorkflow",
       youtubeUrl: "https://youtu.be/TUT97ng8cmk",
       category: "Automation"
+    },
+    {
+      id: "4",
+      title: "Rag Latency Optimization", 
+      description: "Created a base rag and optimizsed that for better latency using  embedding caching,parallel processing and other optimization strategies",
+      technologies: ["Python", "Gen-AI", "RAG"],
+      githubUrl: "https://github.com/2004Snehal/RAG_Optimization",
+      reportUrl: "https://github.com/2004Snehal/RAG_Optimization/blob/main/README.md#structured-report",
+      category: "AI/ML"
     }
   ];
 
