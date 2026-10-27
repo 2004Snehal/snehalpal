@@ -1,0 +1,35 @@
+# Snehal Pal
+
+> Generative AI engineer and researcher. B.Tech. (Hons.) in Chemical Engineering with a Micro Specialization in AI & Applications at IIT Kharagpur (2023–2027, CGPA 8.25/10). Builds RAG systems, LLM agents, Text-to-SQL agents and real-time voice AI.
+
+- Website: https://snehalpal.vercel.app/
+- GitHub: https://github.com/2004Snehal
+- LinkedIn: https://www.linkedin.com/in/snehal-pal-8274403aa/
+- Email: palsnehal004@gmail.com
+
+## Experience
+
+- **Generative AI & Data Science Intern, Founders Office, Purplle.com** (May 2026 – Jul 2026, Mumbai): Built a verification-first Text-to-SQL agent (LangGraph) automating 40+ financial P&L metrics across 8 domains; a pgvector metadata retrieval layer narrowing 120+ tables to 6 per query; and a SQLGlot validator reconciled against Metabase with a 96%+ pass rate within 0.25% error.
+- **AI Engineer Intern, CoralComp** (Mar 2026 – May 2026): Maintained AWS server infrastructure, built an AI chatbot feature, and sped up data updates by moving to a star schema, splitting into smaller databases, storing compressed Parquet on S3, and adding DynamoDB.
+- **Co-Founder, Hodos** (Mar 2025 – Jul 2025): B2B SaaS for corporate travel auditing. Built a multi-tenant RAPTOR retrieval engine (validated across 3 companies, zero leakage) and a 4-hop reasoning pipeline with 95%+ verdict accuracy on pilot claims. Selected for AWS Activate and Microsoft for Startups.
+- **Computer Vision Research Intern, Signal Processing & AI Group, IIT Kharagpur** (Jan 2025 – Mar 2025): Complex-valued CNNs and a multiscale complex Vision Transformer (CV-MsAtViT) for PolSAR land-use classification, reaching 78.2% accuracy.
+- **NLP Research Intern, Mehdie.org, Aalborg University** (Dec 2024 – Jan 2025): MFI-based blocking over 10M+ historical records and XLM-RoBERTa (LoRA) entity embeddings for multilingual record linkage.
+
+## Research
+
+- [Transaction Foundation Models for Retrieval-Augmented Generation over Financial Transaction Data: A Comparative Evaluation with Text Embeddings](https://arxiv.org/abs/2610.28641) (arXiv, cs.IR, sole author): A 1,026-question RAG benchmark over IBM's synthetic AML transactions. NVIDIA's 29M-parameter Transaction Foundation Model reaches 0.81 Recall@5 versus 0.25–0.39 for size-matched text embedders, and 66.7% answer accuracy versus 27.5%; an engineered summary-text baseline matches or exceeds it overall.
+
+## Projects
+
+- [Hodos RAG Microservice](https://github.com/2004Snehal/hodos_microservice_rag): RAPTOR + multi-hop RAG for travel-policy audit. Context recall 0.61 → 0.91 and faithfulness 0.93 on a 40-question RAGAS benchmark.
+- **HiCapy** (Jan 2026 – Feb 2026, closed): AI meeting bot for Google Meet with a p50 1.5s voice pipeline (Pipecat, Deepgram, Groq, WebRTC) on AWS ECS.
+- **Agentic GenAI Analytics Dashboard**: Bronze, General Championship Data Analytics (Frammer.com). 9-stage LangGraph KPI agent; Text-to-SQL RAG accuracy 64% → 91%.
+- [RAG Latency Optimization](https://github.com/2004Snehal/RAG_Optimization)
+- [Text-to-3D Model Generation](https://github.com/2004Snehal/3d-model-generation-shape)
+
+## Achievements
+
+- Selected for Y Combinator Startup School (out of 20,000 applicants)
+- Top 1% in JEE Advanced 2023
+- INMO Camp 2021; Codeforces Specialist (1400+); 13th in state-level NTSE Stage 1
+- Bronze, General Championship Data Analytics; Open IIT Supply Chain Bronze (twice)
