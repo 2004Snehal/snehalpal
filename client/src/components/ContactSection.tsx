@@ -61,7 +61,7 @@ export default function ContactSection() {
     <section id="contact" className="py-24 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Let's Connect</h2>
+          <h2 className="section-heading text-3xl lg:text-4xl font-bold tracking-tight mb-4">Let's Connect</h2>
           <p className="text-lg text-muted-foreground">
             Interested in collaboration, opportunities, or just want to chat about tech and entrepreneurship?
           </p>
@@ -86,7 +86,7 @@ export default function ContactSection() {
                 
                 <Card 
                   className="p-6 hover-elevate cursor-pointer" 
-                  onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-4735b4266/')}
+                  onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-8274403aa/')}
                   data-testid="contact-linkedin"
                 >
                   <div className="flex items-center gap-4">

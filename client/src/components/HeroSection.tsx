@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@assets/snehal_photo.jpg";
+import profileImage from "@assets/snehal_profile.jpg";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -15,26 +15,31 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/30"></div>
+    <section className="min-h-[88vh] pt-16 flex items-center relative overflow-hidden">
+      {/* Background: faint grid texture */}
+      <div className="absolute inset-0 bg-grid"></div>
       
       <div className="max-w-6xl mx-auto px-6 py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl lg:text-6xl font-bold tracking-tight mb-4">
-                Snehal Pal
+              <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground mb-6 shadow-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                IIT Kharagpur · B.Tech. (Hons.) · AI &amp; Applications
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-4">
+                Snehal Pal<span className="text-primary">.</span>
               </h1>
               <div className="text-xl lg:text-2xl text-muted-foreground font-light">
-                <span className="text-primary">Entrepreneur</span> |{' '}
-                <span className="text-primary">Product</span> |{' '}
-                <span className="text-primary">AI</span>
+                <span className="text-primary">Generative AI Engineer</span> |{' '}
+                <span className="text-primary">Researcher</span> |{' '}
+                <span className="text-primary">Founder</span>
               </div>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-              Passionate entrepreneur, AI researcher, product enthusiast.
+              I build RAG systems, LLM agents and voice AI that hold up in production. IIT Kharagpur,
+              ex-Purplle and CoralComp, co-founder of Hodos, and author on arXiv.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -56,7 +61,20 @@ export default function HeroSection() {
               </Button>
             </div>
             
-            <div className="flex gap-4 pt-4">
+            <dl className="grid grid-cols-3 max-w-md border-y py-4">
+              {[
+                { value: '1', label: 'arXiv paper' },
+                { value: '4', label: 'Internships' },
+                { value: 'YC', label: 'Startup School' },
+              ].map(({ value, label }, i) => (
+                <div key={label} className={i > 0 ? 'pl-5 border-l' : ''}>
+                  <dt className="text-2xl font-bold tracking-tight">{value}</dt>
+                  <dd className="text-xs text-muted-foreground">{label}</dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="flex gap-4">
               <Button
                 variant="ghost"
                 size="icon"
@@ -68,7 +86,7 @@ export default function HeroSection() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-4735b4266/')}
+                onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-8274403aa/')}
                 data-testid="link-linkedin"
               >
                 <Linkedin className="h-5 w-5" />
@@ -86,11 +104,11 @@ export default function HeroSection() {
           
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+              <div className="absolute -inset-1 rounded-full bg-primary"></div>
               <img
                 src={profileImage}
                 alt="Snehal Pal"
-                className="relative w-80 h-80 object-cover rounded-full border-4 border-card shadow-2xl"
+                className="relative w-72 h-72 lg:w-80 lg:h-80 object-cover object-[50%_25%] rounded-full border-4 border-background shadow-2xl"
                 data-testid="img-profile"
               />
             </div>

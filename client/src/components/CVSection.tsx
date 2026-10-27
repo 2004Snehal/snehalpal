@@ -13,7 +13,7 @@ export default function CVSection() {
     <section className="py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Resume</h2>
+          <h2 className="section-heading text-3xl lg:text-4xl font-bold tracking-tight mb-4">Resume</h2>
           <p className="text-lg text-muted-foreground">
             Download my comprehensive CV showcasing education, experience, and achievements
           </p>
@@ -28,7 +28,7 @@ export default function CVSection() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold">Professional CV</h3>
-                  <p className="text-muted-foreground">Updated March 2025</p>
+                  <p className="text-muted-foreground">Updated 2026</p>
                 </div>
               </div>
               
@@ -39,11 +39,11 @@ export default function CVSection() {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/50">
                   <span className="text-muted-foreground">Experience</span>
-                  <span className="font-medium">Startup & Research</span>
+                  <span className="font-medium">GenAI, Startup & Research</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/50">
                   <span className="text-muted-foreground">Skills</span>
-                  <span className="font-medium">AI, Product, Business</span>
+                  <span className="font-medium">LLM Agents, RAG, ML, Backend</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-muted-foreground">Languages</span>
@@ -74,11 +74,11 @@ export default function CVSection() {
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Hodos startup experience and achievements</span>
+                  <span className="text-muted-foreground">Purplle, CoralComp and Hodos experience</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Research internships and projects</span>
+                  <span className="text-muted-foreground">Research internships and arXiv publication</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -98,7 +98,7 @@ export default function CVSection() {
               </p>
               <div className="text-sm space-y-1">
                 <p><strong>Email:</strong> palsnehal004@gmail.com</p>
-                <p><strong>LinkedIn:</strong> snehal-pal-4735b4266</p>
+                <p><strong>LinkedIn:</strong> snehal-pal-8274403aa</p>
                 <p><strong>GitHub:</strong> 2004Snehal</p>
               </div>
             </Card>

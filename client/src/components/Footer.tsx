@@ -28,7 +28,7 @@ export default function Footer() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-4735b4266/')}
+              onClick={() => openLink('https://www.linkedin.com/in/snehal-pal-8274403aa/')}
               data-testid="footer-linkedin"
             >
               <Linkedin className="h-5 w-5" />

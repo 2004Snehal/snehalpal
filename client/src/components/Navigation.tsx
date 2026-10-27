@@ -1,27 +1,45 @@
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { useState, useEffect } from "react";
+import { FileText } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const CV_URL = 'https://drive.google.com/drive/folders/1NgWxgX4_aqREwa1f92m1Jmgd-SprJUI3?usp=drive_link';
+
+const navItems = [
+  { id: 'about', label: 'About' },
+  { id: 'timeline', label: 'Experience' },
+  { id: 'research', label: 'Research' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'achievements', label: 'Achievements' },
+  { id: 'contact', label: 'Contact' },
+];
 
 export default function Navigation() {
-  const [isDark, setIsDark] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
-  }, []);
+    // Highlight the nav item for the section currently in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    navItems.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-  const toggleTheme = () => {
-    const newIsDark = !isDark;
-    setIsDark(newIsDark);
-    
-    if (newIsDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -31,54 +49,41 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-background/80 border-b">
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all ${
+      scrolled ? 'bg-background/85 border-b shadow-sm' : 'bg-transparent border-b border-transparent'
+    }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl">Snehal Pal</div>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="font-bold text-xl tracking-tight"
+            data-testid="nav-home"
+          >
+            Snehal Pal<span className="text-primary">.</span>
+          </button>
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-about"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('timeline')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-timeline"
-            >
-              Timeline
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-projects"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('achievements')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-achievements"
-            >
-              Achievements
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-contact"
-            >
-              Contact
-            </button>
+            {navItems.map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className={`relative text-sm font-medium transition-colors after:absolute after:left-0 after:-bottom-1.5 after:h-0.5 after:bg-primary after:transition-all ${
+                  active === id
+                    ? 'text-foreground after:w-full'
+                    : 'text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full'
+                }`}
+                data-testid={`nav-${id}`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
           <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            data-testid="button-theme-toggle"
+            size="sm"
+            onClick={() => window.open(CV_URL, '_blank')}
+            data-testid="button-nav-resume"
           >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            <FileText className="h-4 w-4 mr-2" />
+            Resume
           </Button>
         </div>
       </div>

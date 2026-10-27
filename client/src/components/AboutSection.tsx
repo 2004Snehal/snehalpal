@@ -7,10 +7,10 @@ export default function AboutSection() {
     <section id="about" className="py-24 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="section-heading text-3xl lg:text-4xl font-bold tracking-tight mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate about building technology that creates real impact, combining entrepreneurship, 
-            AI research, and product development to solve complex problems.
+            I build AI systems that have to be right: verified Text-to-SQL agents, multi-hop RAG over
+            policy documents, and real-time voice agents.
           </p>
         </div>
         
@@ -19,13 +19,14 @@ export default function AboutSection() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a tech entrepreneur and AI researcher currently pursuing B.Tech in Chemical Engineering 
-                at IIT Kharagpur. My passion lies at the intersection of technology, business, and innovation.
+                I'm pursuing a B.Tech. (Hons.) in Chemical Engineering with a Micro Specialization in AI &
+                Applications at IIT Kharagpur. I work at the intersection of generative AI, data and product.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                As the former Co-Founder and COO of Hodos, I led the development of a corporate travel 
-                expense management platform that automated complex financial workflows for enterprise clients. 
-                My research focuses on AI applications in data science and machine learning.
+                As Co-Founder of Hodos, I built a multi-tenant RAPTOR retrieval engine for corporate travel
+                auditing. Since then I've built a Text-to-SQL agent for P&L metrics at Purplle's Founders Office,
+                worked as an AI Engineer at CoralComp, and published research on transaction foundation models
+                for RAG on arXiv.
               </p>
             </div>
             
@@ -38,9 +39,10 @@ export default function AboutSection() {
                   <h4 className="font-semibold text-lg mb-2">Education</h4>
                   <div className="space-y-2">
                     <div>
-                      <p className="font-medium">B.Tech, Chemical Engineering</p>
+                      <p className="font-medium">B.Tech. (Hons.), Chemical Engineering</p>
+                      <p className="text-muted-foreground">Micro Specialization in AI & Applications</p>
                       <p className="text-muted-foreground">Indian Institute of Technology Kharagpur</p>
-                      <p className="text-sm text-muted-foreground">2023 - 2027 </p>
+                      <p className="text-sm text-muted-foreground">2023 - 2027 · CGPA 8.25/10</p>
                     </div>
                   </div>
                 </div>
@@ -55,7 +57,8 @@ export default function AboutSection() {
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Academic Excellence</h4>
                   <p className="text-muted-foreground">
-                    Ranked among top 1% in the country in JEE Advanced 2023, securing a seat in IIT Kharagpur.
+                    Top 1% in JEE Advanced 2023. INMO Camp 2021, Codeforces Specialist (1400+), and 13th in
+                    state-level NTSE Stage 1.
                   </p>
                 </div>
               </div>
