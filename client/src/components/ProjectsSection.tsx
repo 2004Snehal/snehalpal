@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, type ChartConfig } from "@/components/ui/chart";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
-import { Github, Play, FileText, GitBranch, Network, Database, ScanLine, ArrowRight } from "lucide-react";
+import { Github, Play, FileText, GitBranch, Network, Database, ScanLine, ArrowRight, AudioLines, Waves, Sigma, Split, Package, BookOpen } from "lucide-react";
 import gcReport from "@assets/Data_Analytics_Report_compressed.pdf";
 
 interface Project {
@@ -36,6 +36,13 @@ const hodosPipeline = [
   { icon: GitBranch, label: "RAPTOR tree (GMM + BIC)" },
   { icon: Network, label: "Multi-hop retrieval" },
   { icon: Database, label: "Tuple cache + audit log" },
+];
+
+const voicedecidePipeline = [
+  { icon: AudioLines, label: "Audio clip" },
+  { icon: Waves, label: "EmbeddingGemma 2 (frozen)" },
+  { icon: Sigma, label: "Cosine → τ → softmax" },
+  { icon: Split, label: "act / confirm / escalate" },
 ];
 
 export default function ProjectsSection() {
@@ -116,14 +123,94 @@ export default function ProjectsSection() {
         <div className="text-center mb-16">
           <h2 className="section-heading text-3xl lg:text-4xl font-bold tracking-tight mb-4">Featured Projects</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Recent work in RAG systems and applied AI, plus earlier analytics and automation projects
+            Recent work in voice AI, RAG systems and applied AI, plus earlier analytics and automation projects
           </p>
         </div>
+
+        {/* Featured: voicedecide open-source library */}
+        <Card className="p-6 lg:p-10 mb-12" data-testid="project-voicedecide">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <Badge className="bg-chart-1 text-primary-foreground">Latest</Badge>
+            <Badge variant="secondary">Open source · PyPI</Badge>
+            <Badge variant="secondary">EmbeddingGemma 2</Badge>
+            <Badge variant="secondary">Voice AI</Badge>
+            <Badge variant="secondary">Apache 2.0</Badge>
+          </div>
+          <div className="space-y-5">
+            <h3 className="text-2xl lg:text-3xl font-semibold leading-tight">
+              voicedecide: Training-Free Decisions on Audio
+            </h3>
+            <p className="text-muted-foreground leading-relaxed max-w-4xl">
+              Python library for call routing and spoken language identification on Google DeepMind's
+              EmbeddingGemma 2. A clip is embedded once and compared with every option, either written
+              descriptions (zero-shot) or prototypes averaged from about 10 labeled clips (few-shot). It returns a
+              probability per option and an act / confirm / escalate action a voice pipeline can branch on.
+              No fine-tuning and no text generation. Grew out of my Kaggle experiment on the model as a voice
+              decision layer.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2">
+              {voicedecidePipeline.map(({ icon: Icon, label }, i) => (
+                <div key={label} className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 rounded-full border bg-background/60 px-3 py-1.5 text-xs">
+                    <Icon className="h-3.5 w-3.5 text-primary" />
+                    {label}
+                  </div>
+                  {i < voicedecidePipeline.length - 1 && <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />}
+                </div>
+              ))}
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4">
+              <div className="rounded-lg border bg-background/60 p-4">
+                <div className="text-sm font-semibold">One embedding, many questions</div>
+                <div className="text-xs text-muted-foreground">Route and language from a single pass, with per-stage latency</div>
+              </div>
+              <div className="rounded-lg border bg-background/60 p-4">
+                <div className="text-sm font-semibold">Calibrated actions</div>
+                <div className="text-xs text-muted-foreground">fit() picks τ and act / confirm thresholds on held-out clips</div>
+              </div>
+              <div className="rounded-lg border bg-background/60 p-4">
+                <div className="text-sm font-semibold">Built-in language-ID pack</div>
+                <div className="text-xs text-muted-foreground">English, Hindi, Bengali, Tamil, Telugu, Marathi tested; untested languages warn</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openLink("https://github.com/2004Snehal/voicedecide")}
+                data-testid="button-github-voicedecide"
+              >
+                <Github className="h-4 w-4 mr-2" />
+                Code
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openLink("https://pypi.org/project/voicedecide/")}
+                data-testid="button-pypi-voicedecide"
+              >
+                <Package className="h-4 w-4 mr-2" />
+                PyPI
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openLink("https://www.kaggle.com/code/palsnehal004/embeddinggemma-2-as-a-training-free-voice-jev?scriptVersionId=363227677")}
+                data-testid="button-kaggle-voicedecide"
+              >
+                <BookOpen className="h-4 w-4 mr-2" />
+                Kaggle notebook
+              </Button>
+            </div>
+          </div>
+        </Card>
 
         {/* Featured: Hodos RAG microservice */}
         <Card className="p-6 lg:p-10 mb-12" data-testid="project-hodos-rag">
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <Badge className="bg-chart-1 text-primary-foreground">Latest</Badge>
             <Badge variant="secondary">FastAPI</Badge>
             <Badge variant="secondary">RAPTOR</Badge>
             <Badge variant="secondary">Multi-hop RAG</Badge>

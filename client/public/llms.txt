@@ -21,6 +21,7 @@
 
 ## Projects
 
+- [voicedecide](https://github.com/2004Snehal/voicedecide) ([PyPI](https://pypi.org/project/voicedecide/)): open-source Python library (Apache 2.0) for training-free call routing and spoken language identification on EmbeddingGemma 2. Zero-shot text anchors or few-shot prototypes; returns per-option probabilities and an act / confirm / escalate action. Built-in language-ID pack tested on English, Hindi, Bengali, Tamil, Telugu and Marathi.
 - [Hodos RAG Microservice](https://github.com/2004Snehal/hodos_microservice_rag): RAPTOR + multi-hop RAG for travel-policy audit. Context recall 0.61 → 0.91 and faithfulness 0.93 on a 40-question RAGAS benchmark.
 - **HiCapy** (Jan 2026 – Feb 2026, closed): AI meeting bot for Google Meet with a p50 1.5s voice pipeline (Pipecat, Deepgram, Groq, WebRTC) on AWS ECS.
 - **Agentic GenAI Analytics Dashboard**: Bronze, General Championship Data Analytics (Frammer.com). 9-stage LangGraph KPI agent; Text-to-SQL RAG accuracy 64% → 91%.
