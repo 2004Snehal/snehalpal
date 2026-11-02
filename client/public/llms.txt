@@ -6,6 +6,7 @@
 - GitHub: https://github.com/2004Snehal
 - LinkedIn: https://www.linkedin.com/in/snehal-pal-8274403aa/
 - Email: palsnehal004@gmail.com
+- Full site as Markdown: https://snehalpal.vercel.app/index.md (also at https://snehalpal.vercel.app/llms-full.txt)
 
 ## Experience
 
@@ -34,3 +35,7 @@
 - Top 1% in JEE Advanced 2023
 - INMO Camp 2021; Codeforces Specialist (1400+); 13th in state-level NTSE Stage 1
 - Bronze, General Championship Data Analytics; Open IIT Supply Chain Bronze (twice)
+
+## Optional
+
+- [Full site in Markdown](https://snehalpal.vercel.app/index.md): every section of the portfolio, including experience details, research results tables, all projects, achievements, resume and contact.

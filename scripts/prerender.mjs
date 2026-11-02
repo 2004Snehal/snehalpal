@@ -13,3 +13,8 @@ const appHtml = render("/");
 if (!html.includes('<div id="root"></div>')) throw new Error("root placeholder not found in index.html");
 fs.writeFileSync(htmlPath, html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`));
 console.log(`prerendered / (${appHtml.length} chars)`);
+
+// Publish the full-site Markdown under the llms-full.txt convention as well.
+const mdPath = path.join(root, "dist/public/index.md");
+fs.copyFileSync(mdPath, path.join(root, "dist/public/llms-full.txt"));
+console.log("wrote llms-full.txt from index.md");
